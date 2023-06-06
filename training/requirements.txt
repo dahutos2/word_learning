@@ -1,0 +1,8 @@
+ipykernel
+ipywidgets
+pandas
+scikit-learn
+torch
+transformers
+accelerate
+python-Levenshtein

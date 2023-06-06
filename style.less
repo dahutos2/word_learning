@@ -1,0 +1,318 @@
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+.markdown-preview.markdown-preview {
+
+    // modify your style here
+    // eg: background-color: blue;  
+    h1 {
+        padding: 0.4em 0.5em;
+        /*文字の上下 左右の余白*/
+        color: #494949;
+        /*文字色*/
+        background: #f4f4f4;
+        /*背景色*/
+        border-left: solid 5px #7db4e6;
+        /*左線*/
+        border-bottom: solid 3px #d7d7d7;
+        /*下線*/
+    }
+
+    h2 {
+        position: relative;
+        padding: 0.5em;
+        background: #7db4e6;
+        color: white;
+    }
+
+    h2::before {
+        position: absolute;
+        content: '';
+        top: 100%;
+        left: 0;
+        border: none;
+        border-bottom: solid 15px transparent;
+        border-right: solid 20px rgb(149, 158, 155);
+    }
+
+    h3 {
+        font-size: 22px;
+        font-weight: bold;
+        border-bottom: 3px solid #33ad9d;
+        margin: 40px 0 10px;
+    }
+
+    h4 {
+        font-size: 18px;
+        font-weight: bold;
+        border-left: 3px solid #33ad9d;
+        margin: 40px 0 10px;
+        padding: 0 0 0 10px;
+    }
+
+    h5 {
+        font-size: 16px;
+        margin: 40px 0 10px;
+        font-weight: bold;
+    }
+
+    /*//////////////////////////////////////////////*/
+    /* tags */
+    /*//////////////////////////////////////////////*/
+
+    hr {
+        height: 1px;
+        background-color: #b8bfbe;
+        margin: 20px 0;
+    }
+
+    em {
+        background: linear-gradient(transparent 80%, #e7ff46 80%);
+        padding: 0 5px;
+        font-style: normal;
+    }
+
+    strong {
+        background: linear-gradient(transparent 0%, #e7ff46 0%);
+        padding: 0 5px;
+        border-radius: 5px;
+    }
+
+    p code,
+    li code,
+    td code {
+        font-family: "Consolas", "Courier New", monospace;
+        background-color: #d0d8d7;
+        font-size: 90%;
+        font-style: normal;
+        padding: 0 5px;
+        border-radius: 3px;
+        color: #1b1b1b;
+    }
+
+    pre {
+        background-color: #272b2b !important;
+    }
+
+    /*//////////////////////////////////////////////*/
+    /* list */
+    /*//////////////////////////////////////////////*/
+
+    ul,
+    ol {
+        padding: 0 0 0.5em 1.5em;
+    }
+
+    ul>li,
+    ol>li {
+        position: relative;
+        list-style: none;
+        margin: 5px 0;
+    }
+
+    ul>li::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0.5em;
+        left: -1em;
+        width: 6px;
+        height: 6px;
+        background-color: #33ad9d;
+        border-radius: 100%;
+    }
+
+    ul ul li::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0.75em;
+        left: -1em;
+        width: 6px;
+        height: 2px;
+        background-color: #33ad9d;
+    }
+
+    ul ul ul li::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0.5em;
+        left: -1em;
+        width: 6px;
+        height: 6px;
+        border-right: 2px solid #33ad9d;
+        border-bottom: 2px solid #33ad9d;
+        background-color: inherit;
+        border-radius: 0;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    /* arrow */
+    ul.arrow>li::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0.5em;
+        left: -1em;
+        width: 6px;
+        height: 6px;
+        border-right: 2px solid #33ad9d;
+        border-bottom: 2px solid #33ad9d;
+        background-color: inherit;
+        border-radius: 0;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    /* check */
+    ul.check>li::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0.5em;
+        left: -1em;
+        width: 8px;
+        height: 3px;
+        border-left: 2px solid #33ad9d;
+        border-bottom: 2px solid #33ad9d;
+        background-color: inherit;
+        border-radius: 0;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    /* ol */
+    ol>li {
+        counter-increment: li;
+    }
+
+    ol>li::before {
+        content: counter(li);
+        display: block;
+        position: absolute;
+        top: .3em;
+        left: -1em;
+        color: #33ad9d;
+        font-size: 14px;
+        line-height: 1;
+        font-weight: bold;
+    }
+
+    /*//////////////////////////////////////////////*/
+    /* table */
+    /*//////////////////////////////////////////////*/
+
+    table {
+        border-collapse: collapse;
+        border: 1px solid #b7bdbc !important;
+        line-height: 1.5;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    table th {
+        padding: 10px;
+        font-size: 12px;
+        font-weight: bold;
+        vertical-align: top;
+        text-align: left;
+        background: #c6cbca;
+        border: 1px solid #b7bdbc !important;
+    }
+
+    table td {
+        font-size: 12px;
+        padding: 10px;
+        vertical-align: top;
+        border: 1px solid #b7bdbc !important;
+    }
+
+    /* stripe */
+    table.stripe tr:nth-child(even) {
+        background: #dcdfdf;
+    }
+
+    /* dark th */
+    table.dark th {
+        color: #e5e8e8;
+        background: #272b2b;
+    }
+
+    /*//////////////////////////////////////////////*/
+    /* box */
+    /*//////////////////////////////////////////////*/
+
+    .box_gray {
+        background: #dcdfdf;
+        border: 2px solid #b8bfbe;
+        border-radius: 10px;
+        margin: 20px 0;
+        padding: 1em;
+    }
+
+    .box_pink {
+        background: #e7d5d5;
+        border: 2px solid #d47e7e;
+        border-radius: 10px;
+        margin: 20px 0;
+        padding: 1em;
+    }
+
+    .box_pink ul,
+    .box_pink ol {
+        padding: 0 0 0 1.5em;
+    }
+
+    .box_pink ol>li::before {
+        content: counter(li);
+        display: block;
+        position: absolute;
+        top: .3em;
+        left: -1em;
+        color: #d47e7e;
+        line-height: 1;
+        font-weight: bold;
+    }
+
+    .box_pink ul>li::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0.5em;
+        left: -1em;
+        width: 6px;
+        height: 6px;
+        background-color: #d47e7e;
+        border-radius: 100%;
+    }
+
+    .box_gray ul,
+    .box_gray ol {
+        padding: 0 0 0 1.5em;
+    }
+
+    .box_gray ol>li::before {
+        content: counter(li);
+        display: block;
+        position: absolute;
+        top: .3em;
+        left: -1em;
+        color: #b8bfbe;
+        line-height: 1;
+        font-weight: bold;
+    }
+
+    .box_gray ul>li::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0.5em;
+        left: -1em;
+        width: 6px;
+        height: 6px;
+        background-color: #b8bfbe;
+        border-radius: 100%;
+    }
+}

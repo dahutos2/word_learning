@@ -1,0 +1,14 @@
+streamlit
+pandas
+scikit-learn
+torch
+transformers
+accelerate
+python-Levenshtein
+sentencepiece
+neologdn
+gensim
+evaluate
+watchdog
+markdown
+libsass
